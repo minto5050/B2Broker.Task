@@ -34,14 +34,13 @@ factorial of any numbers in the input file, you can provide the following option
  
  Questions:
 
- # How would you change the design if the input file was very large?**
+ # How would you change the design if the input file was very large?
 
  The program is designed to process large files, 
  It reads the said files in smaller chunks using `FileStream` and processes them. Chunk size in mega bytes can be specified in the input parameter `--size`
 
  eg: `B2Broker.Task.exe --input input.txt --output output.txt --size 100`
 
- # How would you change the design if the input data was bigger than the available
-RAM?**
+ # How would you change the design if the input data was bigger than the available RAM?
 
 We can adjust the `--size` option to be 50% or less than the size of the RAM.
