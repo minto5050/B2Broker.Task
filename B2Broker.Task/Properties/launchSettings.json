@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "B2Broker.Task": {
+      "commandName": "Project",
+      "commandLineArgs": "--input input.txt --output output.txt"
+    }
+  }
+}
