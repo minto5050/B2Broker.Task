@@ -15,13 +15,15 @@ namespace B2Broker.Task
 		public AnagramApplication() { }
 		public	void Run(FluentCommandLineParser<ApplicationArguments> args)
 		{
-			if (string.IsNullOrEmpty(args.Object.InputWordList)&&string.IsNullOrEmpty(args.Object.Word)&&args.Object.Number==0)
+			if (args.Object.InputWordList==@".\input.txt"&&string.IsNullOrEmpty(args.Object.Word)&&args.Object.Number==0)
 			{
 				Console.WriteLine("B2Broker Coding test");
 				Console.WriteLine("=====================");
 				Console.WriteLine("B2Broker.Task.exe --word <word> for generating the anagrams for a word");
 				Console.WriteLine("B2Broker.Task.exe --input <filepath> --output <filepath> for analysing anagram file");
 				Console.WriteLine("B2Broker.Task.exe --input <filepath> --number <number> to check if the number is a factorial of any numbers in the input file");
+				Console.WriteLine("====================");
+				Console.WriteLine("Staring analysis with default parameters...");
 			}
 			else
 			{
@@ -41,6 +43,10 @@ namespace B2Broker.Task
 					if (existing > 0)
 					{
 						Console.WriteLine($"{args.Object.Number} is the factorial of the number {existing} in the file");
+					}
+					else
+					{
+						Console.WriteLine($"{args.Object.Number} is not a factorial of any numbers in the input file {args.Object.InputWordList}")
 					}
 				}
 			}

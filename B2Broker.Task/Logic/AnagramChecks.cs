@@ -40,6 +40,7 @@ namespace B2Broker.Task.Logic
 					}
 				}
 			}
+			Console.WriteLine($"Output is written to {outputFile}");
 			return 0;
 		}
 		/// <summary>
@@ -93,6 +94,7 @@ namespace B2Broker.Task.Logic
 					writer.WriteLine(anagram);
 				}
 			}
+			Console.WriteLine($"Output is written to {outputWordList}");
 		}
 		private List<string> GetAllPossibleWords(string word)
 		{
