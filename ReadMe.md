@@ -1,7 +1,7 @@
 #  B2Broker Test Task
 
 To download and Run the windows binaries
-	1. Go to releases and Download the archive
+	1. Go to releases and [Download the archive](https://github.com/minto5050/B2Broker.Task/releases/download/0.1/B2Broker.Task.Self.contained.win-x86.zip)
 	2. Extract to a location, along with the test data
 	3. The program `B2Broker.Task.exe` can be run using windows command prompt.
 
