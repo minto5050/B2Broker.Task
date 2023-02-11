@@ -27,7 +27,7 @@ namespace B2Broker.Task
 			{
 				var anagramChecks = new AnagramChecks();
 				if (args.Object.InputWordList != string.Empty&&string.IsNullOrEmpty(args.Object.Word)&&args.Object.Number==0) {
-					anagramChecks.StartAnalysis(args.Object.InputWordList, args.Object.OutputWordList);
+					anagramChecks.StartAnalysis(args.Object.InputWordList, args.Object.OutputWordList,args.Object.ChunkSizeMB);
 					return;
 				}
 				if (!string.IsNullOrEmpty(args.Object.Word) && !string.IsNullOrEmpty(args.Object.OutputWordList))

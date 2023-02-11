@@ -12,5 +12,6 @@ namespace B2Broker.Task.Common
 		public string OutputWordList { get; set; }
 		public string Word { get; set; }
 		public int Number { get; set; }
+		public int ChunkSizeMB { get; set; }
 	}
 }

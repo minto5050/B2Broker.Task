@@ -9,9 +9,10 @@ namespace B2Broker.Task.Logic
 {
 	public class AnagramChecks
 	{
-		public void StartAnalysis(string inputFilePath,string outputFilePath)
+		public void StartAnalysis(string inputFilePath,string outputFilePath,int chunkSize)
 		{
-			FileOperations.ProcessFile(inputFilePath, outputFilePath,FindAndWriteAnagrams);
+			int chunkSizeBytes = chunkSize * 1048576;
+			FileOperations.ProcessFile(inputFilePath, outputFilePath,FindAndWriteAnagrams,chunkSizeBytes);
 		}
 		/// <summary>
 		/// The method writes all words in the input file which are anagrams of other words in the input file to a different output file.

@@ -8,14 +8,19 @@ namespace B2Broker.Task.Logic
 {
 	public static class FileOperations
 	{
-		// 500 MB in bytes
-		const int chunkSize = 536870912;
-
-		public static void ProcessFile(string inputFilePath,string outputFilePath,Func<List<string>,string,int> callback)
+		
+		/// <summary>
+		/// The method opens the file in small chunks and processes it
+		/// </summary>
+		/// <param name="inputFilePath">path of the input file</param>
+		/// <param name="chunkSize">chunk size to split the file while reading default is 500MB</param>
+		/// <param name="outputFilePath">path of the output file</param>
+		/// <param name="callback">the callback method that will process the chunk after read</param>
+		public static void ProcessFile(string inputFilePath, string outputFilePath,Func<List<string>,string,int> callback, int chunkSize)
 		{
 			if (!File.Exists(inputFilePath))
 			{
-				Console.WriteLine("The file does not exist.");
+				Console.WriteLine("The input file does not exist.");
 				return;
 			}
 			// Open the file for reading

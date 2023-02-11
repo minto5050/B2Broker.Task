@@ -13,6 +13,7 @@ class Program
 		p.Setup(arg => arg.OutputWordList).As('o', "output").SetDefault(@".\output.txt").WithDescription("The output file to write");
 		p.Setup(arg => arg.Number).As('n', "number").SetDefault(0).WithDescription("The number to check the reverse factorial exists in the file");
 		p.Setup(arg => arg.Word).As('w', "word").SetDefault("").WithDescription("Word for generating all the possible anagrams");
+		p.Setup(arg => arg.ChunkSizeMB).As('s', "size").SetDefault(500).WithDescription("The chunk size in bytes to process the ");
 		var result = p.Parse(args);
 		if (result.HasErrors == false)
 		{
