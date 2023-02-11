@@ -46,7 +46,7 @@ namespace B2Broker.Task
 					}
 					else
 					{
-						Console.WriteLine($"{args.Object.Number} is not a factorial of any numbers in the input file {args.Object.InputWordList}")
+						Console.WriteLine($"{args.Object.Number} is not a factorial of any numbers in the input file {args.Object.InputWordList}");
 					}
 				}
 			}
